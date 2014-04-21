@@ -49,12 +49,12 @@
     // if only one chosen then add first sigil continue picking
     if ($('.chosen').length === 1){
       player1Sigil = $(selectedSigil).attr('src');
-      player1Sigil = player1Sigil.split('../media/pieces/');
+      player1Sigil = player1Sigil.split('./media/pieces/');
 
     // if two are chosen then add the second and run showStart function
     } else if ($('.chosen').length === 2){
       player2Sigil = $(selectedSigil).attr('src');
-      player2Sigil = player2Sigil.split('../media/pieces/');
+      player2Sigil = player2Sigil.split('./media/pieces/');
       $('.choose').removeClass('choose');
       showStart();
     }

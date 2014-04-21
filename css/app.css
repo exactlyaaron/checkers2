@@ -158,3 +158,12 @@ table#board td.current {
 .hide {
   display: none;
 }
+@media all and (max-width: 400px) and (min-width: 0px) {
+  #container {
+    width: 100%;
+  }
+  table#board td {
+    height: 45px;
+    width: 40px;
+  }
+}
