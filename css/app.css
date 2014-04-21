@@ -166,4 +166,15 @@ table#board td.current {
     height: 45px;
     width: 40px;
   }
+  #player1,
+  #player2 {
+    width: 45%;
+  }
+  table#sigils td {
+    padding-bottom: 10px;
+  }
+  table#sigils td img {
+    width: 90px;
+    height: 90px;
+  }
 }
