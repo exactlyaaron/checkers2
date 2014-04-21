@@ -2,10 +2,71 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title Client Template
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    title Game of Kings Checkers
     link(rel='stylesheet', href='./css/app.css')
+
   body
-    h1 Client Template
+    #container
+
+      h1 Game of Kings
+
+      #players
+        #player1
+          #img
+          p Player 1
+        #player2
+          #img
+          p Player 2
+
+      #clear
+
+      #start.hide
+        h3 START THE GAME
+      #reload.hide
+        h5 CHOOSE NEW HOUSES
+
+      #choose-sigil
+        h3#choose CHOOSE YOUR PLAYER, THEN SIGIL
+
+        table#sigils
+          tbody
+            tr
+              td.sigil.stark
+                img(src='../media/pieces/stark.png')
+              td.sigil.lannister
+                img(src='../media/pieces/lannister.png')
+              td.sigil.targaryen
+                img(src='../media/pieces/targaryen.png')
+            tr
+              td.sigil.baratheon
+                img(src='../media/pieces/baratheon.png')
+              td.sigil.tully
+                img(src='../media/pieces/tully.png')
+              td.sigil.greyjoy
+                img(src='../media/pieces/greyjoy.png')
+            tr
+              td.sigil.bolton
+                img(src='../media/pieces/bolton.png')
+              td.sigil.tyrell
+                img(src='../media/pieces/tyrell.png')
+              td.sigil.mormont
+                img(src='../media/pieces/mormont.png')
+
+      #reload2
+        h5 CHOOSE NEW HOUSES
+
+      table.hide#board
+        tbody
+          - for(var i = 0; i < 8; i++)
+            tr
+              - for(var j = 0; j < 8; j++)
+                if((i+j) % 2 === 1)
+                  td(align='center').valid(data-y=i, data-x=j)
+
+                else
+                  td.invalid(data-y=i, data-x=j)
+
 
     script(src='./js/vendor/jquery-2.1.0.js')
     script(src='./js/source/main.js')
