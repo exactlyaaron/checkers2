@@ -1,1 +1,163 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Game of Kings Checkers</title><link rel="stylesheet" href="./css/app.css"></head><body><div id="container"><h1>Game of Kings</h1><div id="players"><div id="player1"><div id="img"></div><p>Player 1</p></div><div id="player2"><div id="img"></div><p>Player 2</p></div></div><div id="clear"></div><div id="start" class="hide"><h3>START THE GAME</h3></div><div id="reload" class="hide"><h5>CHOOSE NEW HOUSES</h5></div><div id="choose-sigil"><h3 id="choose">CHOOSE YOUR PLAYER, THEN SIGIL</h3><table id="sigils"><tbody><tr><td class="sigil stark"><img src="../media/pieces/stark.png"></td><td class="sigil lannister"><img src="../media/pieces/lannister.png"></td><td class="sigil targaryen"><img src="../media/pieces/targaryen.png"></td></tr><tr><td class="sigil baratheon"><img src="../media/pieces/baratheon.png"></td><td class="sigil tully"><img src="../media/pieces/tully.png"></td><td class="sigil greyjoy"><img src="../media/pieces/greyjoy.png"></td></tr><tr><td class="sigil bolton"><img src="../media/pieces/bolton.png"></td><td class="sigil tyrell"><img src="../media/pieces/tyrell.png"></td><td class="sigil mormont"><img src="../media/pieces/mormont.png"></td></tr></tbody></table></div><div id="reload2"><h5>CHOOSE NEW HOUSES</h5></div><table id="board" class="hide"><tbody><tr><td data-y='0' data-x='0' class="invalid"></td><td align="center" data-y='0' data-x='1' class="valid"></td><td data-y='0' data-x='2' class="invalid"></td><td align="center" data-y='0' data-x='3' class="valid"></td><td data-y='0' data-x='4' class="invalid"></td><td align="center" data-y='0' data-x='5' class="valid"></td><td data-y='0' data-x='6' class="invalid"></td><td align="center" data-y='0' data-x='7' class="valid"></td></tr><tr><td align="center" data-y='1' data-x='0' class="valid"></td><td data-y='1' data-x='1' class="invalid"></td><td align="center" data-y='1' data-x='2' class="valid"></td><td data-y='1' data-x='3' class="invalid"></td><td align="center" data-y='1' data-x='4' class="valid"></td><td data-y='1' data-x='5' class="invalid"></td><td align="center" data-y='1' data-x='6' class="valid"></td><td data-y='1' data-x='7' class="invalid"></td></tr><tr><td data-y='2' data-x='0' class="invalid"></td><td align="center" data-y='2' data-x='1' class="valid"></td><td data-y='2' data-x='2' class="invalid"></td><td align="center" data-y='2' data-x='3' class="valid"></td><td data-y='2' data-x='4' class="invalid"></td><td align="center" data-y='2' data-x='5' class="valid"></td><td data-y='2' data-x='6' class="invalid"></td><td align="center" data-y='2' data-x='7' class="valid"></td></tr><tr><td align="center" data-y='3' data-x='0' class="valid"></td><td data-y='3' data-x='1' class="invalid"></td><td align="center" data-y='3' data-x='2' class="valid"></td><td data-y='3' data-x='3' class="invalid"></td><td align="center" data-y='3' data-x='4' class="valid"></td><td data-y='3' data-x='5' class="invalid"></td><td align="center" data-y='3' data-x='6' class="valid"></td><td data-y='3' data-x='7' class="invalid"></td></tr><tr><td data-y='4' data-x='0' class="invalid"></td><td align="center" data-y='4' data-x='1' class="valid"></td><td data-y='4' data-x='2' class="invalid"></td><td align="center" data-y='4' data-x='3' class="valid"></td><td data-y='4' data-x='4' class="invalid"></td><td align="center" data-y='4' data-x='5' class="valid"></td><td data-y='4' data-x='6' class="invalid"></td><td align="center" data-y='4' data-x='7' class="valid"></td></tr><tr><td align="center" data-y='5' data-x='0' class="valid"></td><td data-y='5' data-x='1' class="invalid"></td><td align="center" data-y='5' data-x='2' class="valid"></td><td data-y='5' data-x='3' class="invalid"></td><td align="center" data-y='5' data-x='4' class="valid"></td><td data-y='5' data-x='5' class="invalid"></td><td align="center" data-y='5' data-x='6' class="valid"></td><td data-y='5' data-x='7' class="invalid"></td></tr><tr><td data-y='6' data-x='0' class="invalid"></td><td align="center" data-y='6' data-x='1' class="valid"></td><td data-y='6' data-x='2' class="invalid"></td><td align="center" data-y='6' data-x='3' class="valid"></td><td data-y='6' data-x='4' class="invalid"></td><td align="center" data-y='6' data-x='5' class="valid"></td><td data-y='6' data-x='6' class="invalid"></td><td align="center" data-y='6' data-x='7' class="valid"></td></tr><tr><td align="center" data-y='7' data-x='0' class="valid"></td><td data-y='7' data-x='1' class="invalid"></td><td align="center" data-y='7' data-x='2' class="valid"></td><td data-y='7' data-x='3' class="invalid"></td><td align="center" data-y='7' data-x='4' class="valid"></td><td data-y='7' data-x='5' class="invalid"></td><td align="center" data-y='7' data-x='6' class="valid"></td><td data-y='7' data-x='7' class="invalid"></td></tr></tbody></table></div><script src="./js/vendor/jquery-2.1.0.js"></script><script src="./js/source/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Game of Kings Checkers</title>
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+  <div id="container">
+    <h1>Game of Kings</h1>
+    <div id="players">
+      <div id="player1">
+        <div id="img"></div>
+        <p>Player 1</p>
+      </div>
+      <div id="player2">
+        <div id="img"></div>
+        <p>Player 2</p>
+      </div>
+    </div>
+    <div id="clear"></div>
+    <div id="start" class="hide">
+      <h3>START THE GAME</h3>
+    </div>
+    <div id="reload" class="hide">
+      <h5>CHOOSE NEW HOUSES</h5>
+    </div>
+    <div id="choose-sigil">
+      <h3 id="choose">CHOOSE YOUR PLAYER, THEN SIGIL</h3>
+      <table id="sigils">
+        <tbody>
+          <tr>
+            <td class="sigil stark">
+              <img src="./media/pieces/stark.png">
+            </td>
+            <td class="sigil lannister">
+              <img src="./media/pieces/lannister.png">
+            </td>
+            <td class="sigil targaryen">
+              <img src="./media/pieces/targaryen.png">
+            </td>
+          </tr>
+          <tr>
+            <td class="sigil baratheon">
+              <img src="./media/pieces/baratheon.png">
+            </td>
+            <td class="sigil tully">
+              <img src="./media/pieces/tully.png">
+            </td>
+            <td class="sigil greyjoy">
+              <img src="./media/pieces/greyjoy.png">
+            </td>
+          </tr>
+          <tr>
+            <td class="sigil bolton">
+              <img src="./media/pieces/bolton.png">
+            </td>
+            <td class="sigil tyrell">
+              <img src="./media/pieces/tyrell.png">
+            </td>
+            <td class="sigil mormont">
+              <img src="./media/pieces/mormont.png">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="reload2">
+      <h5>CHOOSE NEW HOUSES</h5>
+    </div>
+    <table id="board" class="hide">
+      <tbody>
+        <tr>
+          <td data-y='0' data-x='0' class="invalid"></td>
+          <td align="center" data-y='0' data-x='1' class="valid"></td>
+          <td data-y='0' data-x='2' class="invalid"></td>
+          <td align="center" data-y='0' data-x='3' class="valid"></td>
+          <td data-y='0' data-x='4' class="invalid"></td>
+          <td align="center" data-y='0' data-x='5' class="valid"></td>
+          <td data-y='0' data-x='6' class="invalid"></td>
+          <td align="center" data-y='0' data-x='7' class="valid"></td>
+        </tr>
+        <tr>
+          <td align="center" data-y='1' data-x='0' class="valid"></td>
+          <td data-y='1' data-x='1' class="invalid"></td>
+          <td align="center" data-y='1' data-x='2' class="valid"></td>
+          <td data-y='1' data-x='3' class="invalid"></td>
+          <td align="center" data-y='1' data-x='4' class="valid"></td>
+          <td data-y='1' data-x='5' class="invalid"></td>
+          <td align="center" data-y='1' data-x='6' class="valid"></td>
+          <td data-y='1' data-x='7' class="invalid"></td>
+        </tr>
+        <tr>
+          <td data-y='2' data-x='0' class="invalid"></td>
+          <td align="center" data-y='2' data-x='1' class="valid"></td>
+          <td data-y='2' data-x='2' class="invalid"></td>
+          <td align="center" data-y='2' data-x='3' class="valid"></td>
+          <td data-y='2' data-x='4' class="invalid"></td>
+          <td align="center" data-y='2' data-x='5' class="valid"></td>
+          <td data-y='2' data-x='6' class="invalid"></td>
+          <td align="center" data-y='2' data-x='7' class="valid"></td>
+        </tr>
+        <tr>
+          <td align="center" data-y='3' data-x='0' class="valid"></td>
+          <td data-y='3' data-x='1' class="invalid"></td>
+          <td align="center" data-y='3' data-x='2' class="valid"></td>
+          <td data-y='3' data-x='3' class="invalid"></td>
+          <td align="center" data-y='3' data-x='4' class="valid"></td>
+          <td data-y='3' data-x='5' class="invalid"></td>
+          <td align="center" data-y='3' data-x='6' class="valid"></td>
+          <td data-y='3' data-x='7' class="invalid"></td>
+        </tr>
+        <tr>
+          <td data-y='4' data-x='0' class="invalid"></td>
+          <td align="center" data-y='4' data-x='1' class="valid"></td>
+          <td data-y='4' data-x='2' class="invalid"></td>
+          <td align="center" data-y='4' data-x='3' class="valid"></td>
+          <td data-y='4' data-x='4' class="invalid"></td>
+          <td align="center" data-y='4' data-x='5' class="valid"></td>
+          <td data-y='4' data-x='6' class="invalid"></td>
+          <td align="center" data-y='4' data-x='7' class="valid"></td>
+        </tr>
+        <tr>
+          <td align="center" data-y='5' data-x='0' class="valid"></td>
+          <td data-y='5' data-x='1' class="invalid"></td>
+          <td align="center" data-y='5' data-x='2' class="valid"></td>
+          <td data-y='5' data-x='3' class="invalid"></td>
+          <td align="center" data-y='5' data-x='4' class="valid"></td>
+          <td data-y='5' data-x='5' class="invalid"></td>
+          <td align="center" data-y='5' data-x='6' class="valid"></td>
+          <td data-y='5' data-x='7' class="invalid"></td>
+        </tr>
+        <tr>
+          <td data-y='6' data-x='0' class="invalid"></td>
+          <td align="center" data-y='6' data-x='1' class="valid"></td>
+          <td data-y='6' data-x='2' class="invalid"></td>
+          <td align="center" data-y='6' data-x='3' class="valid"></td>
+          <td data-y='6' data-x='4' class="invalid"></td>
+          <td align="center" data-y='6' data-x='5' class="valid"></td>
+          <td data-y='6' data-x='6' class="invalid"></td>
+          <td align="center" data-y='6' data-x='7' class="valid"></td>
+        </tr>
+        <tr>
+          <td align="center" data-y='7' data-x='0' class="valid"></td>
+          <td data-y='7' data-x='1' class="invalid"></td>
+          <td align="center" data-y='7' data-x='2' class="valid"></td>
+          <td data-y='7' data-x='3' class="invalid"></td>
+          <td align="center" data-y='7' data-x='4' class="valid"></td>
+          <td data-y='7' data-x='5' class="invalid"></td>
+          <td align="center" data-y='7' data-x='6' class="valid"></td>
+          <td data-y='7' data-x='7' class="invalid"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="./js/vendor/jquery-2.1.0.js"></script>
+  <script src="./js/source/main.js"></script>
+</body>
+
+</html>
