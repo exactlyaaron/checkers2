@@ -1,0 +1,160 @@
+@import url(http://fonts.googleapis.com/css?family=Cinzel);
+* {
+  -webkit-transition: all 0.2s;
+  /* For Safari 3.1 to 6.0 */
+  transition: all 0.2s;
+}
+body {
+  background-image: url(../media/background.jpg);
+  background-size: cover;
+  font-family: 'Cinzel', serif;
+  color: #e1e1e1;
+}
+#clear {
+  width: 100%;
+  clear: both;
+}
+#container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  text-indent: -9999px;
+  background-image: url(../media/gameofkings-title.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 100px;
+}
+h3#choose {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+#players {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#player1 {
+  float: left;
+}
+#player2 {
+  float: right;
+}
+#player1,
+#player2 {
+  width: 40%;
+  border-radius: 4px;
+  padding-top: 20px;
+  border: 2px solid rgba(1, 1, 1, 0);
+}
+#player1 #img,
+#player2 #img {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #fff;
+}
+#player1 #img img,
+#player2 #img img {
+  width: 100%;
+  height: auto;
+}
+#player1:hover,
+#player2:hover {
+  border: 2px solid #ddd;
+}
+#player1.choose,
+#player2.choose {
+  border: 2px solid #ddd;
+  box-shadow: inset #fff 0px 0px 15px;
+}
+#start,
+#reload,
+#reload2 {
+  width: 50%;
+  margin: 20px auto;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all 0s;
+  /* For Safari 3.1 to 6.0 */
+  transition: all 0s;
+}
+#start:hover,
+#reload:hover,
+#reload2:hover {
+  -webkit-transition: all 0s;
+  /* For Safari 3.1 to 6.0 */
+  transition: all 0s;
+  background-color: #eee;
+  color: #333;
+}
+table#sigils {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 500px;
+}
+table#sigils td {
+  padding-bottom: 10px;
+}
+table#sigils td img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+table#sigils td img:hover {
+  box-shadow: #eee 0px 0px 15px;
+}
+table#board {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: #000 0px 0px 20px;
+}
+table#board td {
+  height: 75px;
+  width: 75px;
+  text-align: center;
+  vertical-align: middle;
+}
+table#board td img {
+  width: 95%;
+  height: auto;
+  border-radius: 50%;
+  background-color: #fff;
+}
+table#board td.valid {
+  background-color: #252525;
+  box-shadow: inset #000 0px 0px 10px;
+  -webkit-transition: all 0.01s;
+  /* For Safari 3.1 to 6.0 */
+  transition: all 0.01s;
+}
+table#board td.valid:hover {
+  box-shadow: inset #fff 0px 0px 6px 6px;
+  -webkit-transition: all 0.01s;
+  /* For Safari 3.1 to 6.0 */
+  transition: all 0.01s;
+}
+table#board td.invalid {
+  background-image: url(../media/invalid-bg.jpg);
+  background-size: cover;
+  background-color: #d9d9d9;
+}
+table#board td.selected {
+  background-color: #ddd;
+}
+table#board td.current {
+  box-shadow: inset #ddd 0px 0px 3px 3px;
+}
+.hide {
+  display: none;
+}
