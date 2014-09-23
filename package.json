@@ -16,6 +16,8 @@
     "grunt-contrib-copy"  : "*",
     "grunt-contrib-jade"  : "*",
     "grunt-contrib-less"  : "*",
-    "grunt-contrib-clean" : "*"
+    "grunt-contrib-clean" : "*",
+    "morgan" : "*",
+    "serve-static": "*"
   }
 }
